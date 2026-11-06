@@ -56,7 +56,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('estados-articulo', EstadoArticuloController::class)->parameters(['estados-articulo' => 'estadoArticulo']);
 
-    Route::resource('articulos', ArticuloController::class);
+    Route::resource('articulos', ArticuloController::class); 
 
     Route::resource('referencias', ReferenciaController::class);
     Route::patch('referencias/{referencia}/toggle-status', [ReferenciaController::class, 'toggleStatus'])->name('referencias.toggle-status');
